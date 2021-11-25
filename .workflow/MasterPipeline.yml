@@ -55,7 +55,6 @@ stages:
       - step: deploy@agent
         name: deploy_agent
         displayName: '主机部署'
-		# 上图中的主机组ID--springboot
         hostGroupID: springboot
         deployArtifact:
             # 部署包来源，build表示来源于上游流水线，artifact表示来源于制品仓库，推荐使用build
