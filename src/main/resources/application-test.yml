@@ -1,0 +1,14 @@
+#1 测试环境配置文件
+
+##2 Spring 相关配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: workorders
+    url: jdbc:mysql://47.114.109.202:3306/workorders?useSSL=false&serverTimezone=UTC&characterEncoding=UTF8&allowPublicKeyRetrieval=true
+    username: workorders
+
+##2 打印执行的sql语句
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

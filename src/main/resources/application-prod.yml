@@ -1,0 +1,14 @@
+#1 生产环境配置文件
+
+##2 Spring 相关配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: medical_cloud
+    url: jdbc:mysql://47.114.109.202:3306/medical_cloud?useSSL=false&serverTimezone=UTC&characterEncoding=UTF8&allowPublicKeyRetrieval=true
+    username: medical_cloud
+
+##2 打印执行的sql语句
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
