@@ -62,7 +62,7 @@ stages:
             # 将部署包下载到主机后的部署包名，默认output
             name: output
             # 将部署包下载主机的具体目录，默认 ~/gitee_go/deoloy
-            target: ~/gitee_go/deoloy
+            target: /www/projects/template
             # 上游制品名，只有当source为build时生效，默认output
             dependArtifact: output
             # 以下内容只有在source为artifact时生效，制品库名，默认default
@@ -73,7 +73,7 @@ stages:
             artifactVersion: latest
         script: 
           |
-          cd ~/gitee_go/deoloy
+          cd /www/projects/template
           ls
           echo "结束正在运行的进程"
           kill -9 `lsof -ti:8080`
