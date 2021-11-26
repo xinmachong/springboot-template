@@ -78,7 +78,8 @@ stages:
           temp=`lsof -ti:8080`
           if [ $temp ]
           then
-             kill -9 $port
+             kill -9 $temp
+          echo $temp
           tar -zxf output.tar.gz
           cd target
           nohup java -jar template-0.0.1-SNAPSHOT.jar --server.port=8080 & 
