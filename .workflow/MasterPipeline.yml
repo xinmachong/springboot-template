@@ -86,6 +86,7 @@ stages:
           echo "Deploy Success"
           sleep 30
           curl 127.0.0.1:8080
+          fi
 triggers:
   push:
     branches:
