@@ -75,8 +75,10 @@ stages:
           |
           cd /www/projects/template
           ls
-          echo "结束正在运行的进程"
-          kill -9 `lsof -ti:8080`
+          temp=`lsof -ti:8080`
+          if [ $temp ]
+          then
+             kill -9 $port
           tar -zxf output.tar.gz
           cd target
           nohup java -jar template-0.0.1-SNAPSHOT.jar --server.port=8080 & 
