@@ -76,6 +76,8 @@ stages:
           cd /www/projects/template
           ls
           temp=`lsof -ti:8080`
+          if [ $temp ];
+          then
           kill -9 $temp
           echo $temp
           tar -zxf output.tar.gz
